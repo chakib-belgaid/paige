@@ -25,7 +25,7 @@ Code:
 Result:
 
 {{< paige/gallery >}}
-    {{< paige/gallery image="https://picsum.photos/400/300.webp" raw=true />}}
+    {{< paige/gallery image="https://picsum.photos/400/300.webp"  />}}
 {{< /paige/gallery >}}
 
 ---

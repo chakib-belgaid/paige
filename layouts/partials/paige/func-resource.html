@@ -11,6 +11,7 @@
     {{ with $page.Resources.Get $url }}
         {{ $result = . }}
     {{ else }}
+        {{ warnf "@@@@@@@@@@@@@@@ GetMatch %#v" $url }}
         {{ with resources.GetMatch $url }}
             {{ $result = . }}
         {{ else }}
