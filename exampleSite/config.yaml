@@ -10,9 +10,9 @@ languages:
         name: Home
         url: /
         weight: 10
-      - identifier: content
-        name: Content
-        url: /content/
+      - identifier: foo
+        name: Foo
+        url: /foo/
         weight: 20
       - identifier: layouts
         name: Layouts
