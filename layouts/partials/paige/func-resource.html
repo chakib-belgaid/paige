@@ -5,25 +5,23 @@
 
 {{ $result := "" }}
 
-{{ if (urls.Parse $url).Scheme }}
-    {{ with resources.GetRemote $url }}
-        {{ with .Err }}
-            {{ errorf "cannot get remote resource %q: %v" $url . }}
-        {{ else }}
-            {{ $result = . }}
-        {{ end }}
+{{ $u := $url | urls.Parse }}
+
+{{ if $u.IsAbs }}
+    {{ with resources.GetRemote $u.String }}
+        {{ $result = . }}
     {{ end }}
 {{ else }}
-    {{ with $page.Resources.GetMatch $url }}
+    {{ with $page.Resources.GetMatch $u.Path }}
         {{ $result = . }}
     {{ else }}
-        {{ with $page.Resources.Get $url }}
+        {{ with $page.Resources.Get $u.Path }}
             {{ $result = . }}
         {{ else }}
-            {{ with resources.GetMatch $url }}
+            {{ with resources.GetMatch $u.Path }}
                 {{ $result = . }}
             {{ else }}
-                {{ with resources.Get $url }}
+                {{ with resources.Get $u.Path }}
                     {{ $result = . }}
                 {{ end }}
             {{ end }}
