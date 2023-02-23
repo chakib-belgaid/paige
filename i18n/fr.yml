@@ -1,0 +1,33 @@
+paige_figure:
+  other: Figure
+
+paige_aria_page_link:
+  other: Lien vers cette page
+
+paige_aria_section_link:
+  other: Lien vers cette section
+
+paige_minutes:
+  one: minute
+  other: minutes
+
+paige_noscript:
+  other: JavaScript est requis.
+
+paige_search_button:
+  other: Rechercher
+
+paige_search_error:
+  other: Erreur
+
+paige_search_input:
+  other: Requête
+
+paige_search_nothing:
+  other: Rien trouvé
+
+paige_search_searching:
+  other: Recherche en cours
+
+paige_search_something:
+  other: Quelque chose a été trouvé
